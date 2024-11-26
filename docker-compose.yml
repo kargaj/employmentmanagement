@@ -3,7 +3,7 @@ version: '3.9'
 services:
   postgres:
     image: postgres:15
-    container_name: postgres_db
+    container_name: db
     environment:
       POSTGRES_USER: your_user
       POSTGRES_PASSWORD: your_password
@@ -30,3 +30,16 @@ services:
       - POSTGRES_HOST=postgres
     env_file:
       - .env
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: vue_app
+    command: npm run dev
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Ensures hot reload works in Docker
