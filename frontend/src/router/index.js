@@ -9,11 +9,11 @@ const routes = [
   {
     path: "/employers",
     name: ROUTES.EMPLOYERS,
-    component: () => import("../components/EmployersListView.vue"),
+    component: () => import("../components/EmployersList.vue"),
   }, {
     path: "/employers/add",
     name: ROUTES.EMPLOYER_ADD,
-    component: () => import("../components/EmployerAddView.vue"), 
+    component: () => import("../components/EmployerAddForm.vue"), 
   },
 ];
 
