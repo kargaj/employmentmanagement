@@ -4,7 +4,7 @@ from django.utils import timezone
 from .validators import validate_birth_date, validate_name
 
 
-class Employee(models.Model):
+class Employer(models.Model):
     DEPARTMENT_CHOICES = [
         ('HR', 'Human Resources'),
         ('DEV', 'Developers'),
