@@ -1,7 +1,5 @@
 import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
-import pluginPlaywright from 'eslint-plugin-playwright'
-import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
 export default [
   {
@@ -15,11 +13,11 @@ export default [
   },
 
   js.configs.recommended,
-  ...pluginVue.configs['flat/essential'],
-  
+  ...pluginVue.configs['flat/recommended'],
+
   {
-    ...pluginPlaywright.configs['flat/recommended'],
-    files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
-  },
-  skipFormatting,
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  }
 ]
