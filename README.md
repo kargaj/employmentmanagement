@@ -50,7 +50,7 @@ End-to-end testing for the frontend using Playwright is planned for future imple
 ## API Documentation
 
 The backend provides a RESTful API at the `/employers` endpoint to manage employment data. 
-## Employer Fields
+### Employer Fields
 
 | Field Name   | Type     | Description                | Read-Only |
 |--------------|----------|----------------------------|-----------|
